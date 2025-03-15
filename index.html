@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Cobrinha</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+            color: white;
+        }
+        h1 {
+            margin-bottom: 5px;
+        }
+        canvas {
+            background: black;
+            border: 2px solid white;
+        }
+        .info {
+            margin: 10px;
+            font-size: 18px;
+        }
+        .game-over {
+            display: none;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐍 Jogo da Cobrinha 🐍</h1>
+    <p class="info">Pontuação: <span id="score">0</span></p>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <p class="game-over" id="gameOverText">Game Over! <br> Pontuação Final: <span id="finalScore"></span></p>
+    <button onclick="restartGame()">Reiniciar</button>
+    <button onclick="togglePause()">Pause/Resume</button>
+    <audio id="eatSound" src="eat.mp3"></audio>
+    <audio id="gameOverSound" src="gameover.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
